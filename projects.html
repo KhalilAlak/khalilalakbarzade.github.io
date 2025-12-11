@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Khalil Alakbarzade</title>
 
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/style.css" />
 
@@ -12,7 +17,7 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
-<body>
+<body data-theme="light">
   <header class="site-header">
     <div class="container header-content">
       <div>
@@ -25,12 +30,13 @@
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="index.html#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="section">
+    <section class="section reveal">
       <div class="container">
         <h2>Data Science & Analytics Projects</h2>
         <p class="page-intro">
@@ -41,7 +47,7 @@
 
         <div class="project-list">
           <!-- Project 1 -->
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <h3>British Social Attitudes 2019 – End-to-End Analysis</h3>
             <p>
               Analysed the 2019 British Social Attitudes Survey to explore opinions on poverty,
@@ -59,7 +65,7 @@
           </article>
 
           <!-- Project 2 -->
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <h3>Social Engagement & Health in Older Adults</h3>
             <p>
               Used SPSS to investigate how age, physical health, mental health, and life satisfaction
@@ -74,7 +80,7 @@
           </article>
 
           <!-- Project 3 -->
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <h3>NLSAA Dataset – Data Cleaning & Validation</h3>
             <p>
               Focused on preparing a large social survey dataset (NLSAA) for analysis. Identified
@@ -89,7 +95,7 @@
           </article>
 
           <!-- Project 4 -->
-          <article class="card project-card">
+          <article class="card project-card reveal">
             <h3>Himalayan Expeditions – Exploratory Analysis in R</h3>
             <p>
               Used an open dataset on Himalayan mountaineering expeditions to explore success
@@ -102,8 +108,8 @@
             </ul>
           </article>
 
-          <!-- Project 5 (placeholder for future work) -->
-          <article class="card project-card">
+          <!-- Project 5 (planned) -->
+          <article class="card project-card reveal">
             <h3>Industrial Analytics – Downtime & Process Performance (Planned)</h3>
             <p>
               Planned project applying data science to an industrial or manufacturing setting,
@@ -121,7 +127,7 @@
     </section>
 
     <!-- Call to action -->
-    <section class="section section-alt">
+    <section class="section section-alt reveal">
       <div class="container">
         <h2>Want to know more?</h2>
         <p>
@@ -134,18 +140,65 @@
         <div class="hero-buttons">
           <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank">Visit my GitHub</a>
           <a class="btn outline" href="index.html#contact">Contact me</a>
+          <a class="btn outline" href="Khalil_Alakbarzade_CV.pdf" download>Download CV</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Floating Contact Button (back to main page contact) -->
+  <a href="index.html#contact" class="contact-fab">Contact</a>
+
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Khalil Alakbarzade. All rights reserved.</p>
     </div>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <script>
+    (function () {
+      // Year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // THEME TOGGLE
+      const body = document.body;
+      const btn = document.getElementById("theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      let theme = storedTheme || (prefersDark ? "dark" : "light");
+      body.setAttribute("data-theme", theme);
+
+      function updateToggleIcon() {
+        if (!btn) return;
+        btn.textContent = theme === "dark" ? "☀" : "☾";
+      }
+
+      updateToggleIcon();
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          theme = theme === "dark" ? "light" : "dark";
+          body.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+          updateToggleIcon();
+        });
+      }
+
+      // SCROLL REVEAL ANIMATIONS
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    })();
+  </script>
 </body>
 </html>
