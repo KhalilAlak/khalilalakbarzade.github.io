@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khalil Alakbarzade | Data Scientist</title>
 
+  <!-- Google Font: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/style.css" />
 
@@ -12,7 +17,7 @@
   <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 
-<body>
+<body data-theme="light">
   <header class="site-header">
     <div class="container header-content">
       <div>
@@ -25,13 +30,14 @@
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
         <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
       </nav>
     </div>
   </header>
 
   <main>
     <!-- Hero / Intro -->
-    <section class="hero">
+    <section class="hero reveal">
       <div class="container hero-grid">
         <div>
           <h2>Hi, I’m Khalil 👋</h2>
@@ -47,11 +53,13 @@
           <div class="hero-buttons">
             <a class="btn primary" href="projects.html">View My Projects</a>
             <a class="btn outline" href="#contact">Get in Touch</a>
+            <!-- Download CV button (upload the PDF to the repo root) -->
+            <a class="btn outline" href="Khalil_Alakbarzade_CV.pdf" download>Download CV</a>
           </div>
         </div>
 
         <!-- Profile + Quick Info Card -->
-        <div class="hero-card">
+        <div class="hero-card reveal">
           <img src="assets/profile.jpg" alt="Khalil Alakbarzade" class="avatar" />
           <h3>Quick Info</h3>
           <ul>
@@ -65,11 +73,11 @@
     </section>
 
     <!-- Skills -->
-    <section class="section">
+    <section class="section reveal">
       <div class="container">
         <h2>Skills</h2>
         <div class="grid-3">
-          <div class="card">
+          <div class="card reveal">
             <h3>Data & Analytics</h3>
             <ul>
               <li>Data cleaning & wrangling</li>
@@ -78,7 +86,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card reveal">
             <h3>Tools & Languages</h3>
             <ul>
               <li>Python (pandas, NumPy, scikit-learn)</li>
@@ -87,7 +95,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class1="card reveal">
             <h3>Domains & Interests</h3>
             <ul>
               <li>Industrial & manufacturing analytics</li>
@@ -100,11 +108,11 @@
     </section>
 
     <!-- Featured Projects -->
-    <section class="section section-alt">
+    <section class="section section-alt reveal">
       <div class="container">
         <h2>Featured Projects</h2>
         <div class="grid-2">
-          <div class="card">
+          <div class="card reveal">
             <h3>British Social Attitudes 2019 Analysis</h3>
             <p>
               End-to-end analysis of the British Social Attitudes Survey 2019 using R:
@@ -114,7 +122,7 @@
             <a class="link" href="projects.html">See more details →</a>
           </div>
 
-          <div class="card">
+          <div class="card reveal">
             <h3>Social Engagement & Health in Older Adults</h3>
             <p>
               Regression-based analysis in SPSS exploring how health, age, and
@@ -128,7 +136,7 @@
     </section>
 
     <!-- About -->
-    <section class="section">
+    <section class="section reveal">
       <div class="container">
         <h2>About Me</h2>
         <div class="about-grid">
@@ -148,7 +156,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="section section-alt" id="contact">
+    <section class="section section-alt reveal" id="contact">
       <div class="container">
         <h2>Contact</h2>
         <p>
@@ -165,14 +173,59 @@
     </section>
   </main>
 
+  <!-- Floating Contact Button -->
+  <a href="#contact" class="contact-fab">Contact</a>
+
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Khalil Alakbarzade. All rights reserved.</p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <script>
+    (function () {
+      // Year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // THEME TOGGLE
+      const body = document.body;
+      const btn = document.getElementById("theme-toggle");
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      let theme = storedTheme || (prefersDark ? "dark" : "light");
+      body.setAttribute("data-theme", theme);
+
+      function updateToggleIcon() {
+        if (!btn) return;
+        btn.textContent = theme === "dark" ? "☀" : "☾";
+      }
+
+      updateToggleIcon();
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          theme = theme === "dark" ? "light" : "dark";
+          body.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+          updateToggleIcon();
+        });
+      }
+
+      // SCROLL REVEAL ANIMATIONS
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    })();
+  </script>
 </body>
 </html>
