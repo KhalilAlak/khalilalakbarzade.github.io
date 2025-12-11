@@ -5,100 +5,263 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Khalil Alakbarzade</title>
 
+  <!-- Google Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://khalilalakbarzade.com/projects/" />
 </head>
 
 <body data-theme="light">
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
       <div>
-        <h1 class="site-title">Projects</h1>
+        <h1 class="site-title">Khalil Alakbarzade</h1>
         <p class="site-subtitle">
-          Selected work in data science, analytics, and machine learning
+          Data Science MSc · Industrial Engineering background · Analytics &amp; ML
         </p>
       </div>
+
       <nav>
-        <a href="/">Home</a>
-        <a href="/projects/">Projects</a>
-        <a href="/#contact">Contact</a>
+        <a href="/" data-i18n="nav-home">Home</a>
+        <a href="/projects/" data-i18n="nav-projects">Projects</a>
+        <a href="/#contact" data-i18n="nav-contact">Contact</a>
+        <button id="lang-toggle" class="lang-toggle" type="button">EN</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- PROJECT LIST -->
     <section class="section reveal">
       <div class="container">
-        <h2>Data Science & Analytics Projects</h2>
-        <p class="page-intro">
+        <h2 data-i18n="proj-title">Data Science &amp; Analytics Projects</h2>
+        <p class="page-intro" data-i18n="proj-intro">
           A selection of projects from my MSc Data Science, Industrial Engineering background,
           and personal learning. Each project focuses on real datasets, clear analysis, and
           communicating results in a practical way.
         </p>
 
         <div class="project-list">
-          <!-- Example projects (same content as before) -->
-          <!-- ... keep your existing project cards here ... -->
+          <!-- Project 1 -->
+          <article class="card project-card reveal">
+            <h3>British Social Attitudes 2019 – End-to-End Analysis</h3>
+            <p>
+              Analysed the 2019 British Social Attitudes Survey to explore attitudes to poverty,
+              welfare, and politics. Cleaned and transformed raw survey data, handled missing
+              values and factors, built exploratory visualisations, and produced a concise report
+              summarising key trends across demographic groups.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: R (tidyverse, ggplot2)</li>
+              <li>📊 Techniques: Data cleaning, EDA, visualisation, survey data handling</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak" target="_blank" rel="noopener">
+              View project on GitHub →
+            </a>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card project-card reveal">
+            <h3>Social Engagement &amp; Health in Older Adults</h3>
+            <p>
+              Used SPSS to investigate how age, physical health, mental health, and life satisfaction
+              relate to social engagement scores in older adults. Built multiple linear regression
+              models, checked assumptions, interpreted coefficients, and discussed implications
+              for policy and practice.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: SPSS</li>
+              <li>📊 Techniques: Multiple regression, diagnostics, effect size estimation</li>
+            </ul>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card project-card reveal">
+            <h3>NLSAA Dataset – Data Cleaning &amp; Validation</h3>
+            <p>
+              Focused on preparing a large social survey dataset (NLSAA) for analysis. Explored
+              missing data patterns, outliers, and inconsistent coding; recoded variables; and created
+              an analysis-ready dataset. Compared results before and after cleaning to show the
+              impact of data quality on findings.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: SPSS / R</li>
+              <li>📊 Techniques: Missing data handling, outlier detection, data validation</li>
+            </ul>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="card project-card reveal">
+            <h3>Himalayan Expeditions – Exploratory Analysis in R</h3>
+            <p>
+              Used the Himalayan mountaineering expeditions dataset (TidyTuesday) to explore
+              success rates, risk factors, and mortality over time. Performed data wrangling,
+              created visualisations, and compared outcomes across peaks, seasons, and expedition
+              types.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: R (tidyverse)</li>
+              <li>📊 Techniques: EDA, visualisation, feature engineering</li>
+            </ul>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="card project-card reveal">
+            <h3>Industrial Analytics – Downtime &amp; Process Performance (Planned)</h3>
+            <p>
+              Planned project applying data science to an industrial setting, focusing on predicting
+              machine downtime and identifying bottlenecks using historical production and sensor
+              data. This project combines my Industrial Engineering background with machine
+              learning to support smarter maintenance and process optimisation.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: Python (pandas, scikit-learn)</li>
+              <li>📊 Techniques: Supervised learning, feature engineering, model evaluation</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CALL TO ACTION -->
     <section class="section section-alt reveal">
       <div class="container">
-        <h2>Want to know more?</h2>
-        <p>
+        <h2 data-i18n="cta-title">Want to know more?</h2>
+        <p data-i18n="cta-text-1">
           Many of these projects are available as reproducible code and notebooks.
           I’m always happy to talk about the data, methods, and decisions behind the results.
         </p>
+        <p data-i18n="cta-text-2">
+          You can explore more work on my GitHub or reach out via email or LinkedIn.
+        </p>
+
         <div class="hero-buttons">
-          <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank" rel="noopener">Visit my GitHub</a>
-          <a class="btn outline" href="/#contact">Contact me</a>
-          <a class="btn outline" href="/Khalil_Alakbarzade_CV.pdf" download>Download CV</a>
+          <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank" rel="noopener" data-i18n="cta-btn-github">
+            Visit my GitHub
+          </a>
+          <a class="btn outline" href="/#contact" data-i18n="cta-btn-contact">Contact me</a>
+          <a class="btn outline" href="/Khalil_Alakbarzade_CV.pdf" download data-i18n="cta-btn-cv">Download CV</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <p>© <span id="year"></span> Khalil Alakbarzade. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- JS: dark mode + language + scroll reveal -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const body = document.body;
-    const toggle = document.getElementById("theme-toggle");
+    const themeToggle = document.getElementById("theme-toggle");
+    const langToggle = document.getElementById("lang-toggle");
+
     const storedTheme = localStorage.getItem("theme");
+    const storedLang = localStorage.getItem("lang");
     const prefersDark = window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     let theme = storedTheme || (prefersDark ? "dark" : "light");
-    body.setAttribute("data-theme", theme);
-    toggle.textContent = theme === "dark" ? "☀" : "☾";
+    let lang = storedLang || "en";
 
-    toggle.addEventListener("click", () => {
-      theme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    body.setAttribute("data-theme", theme);
+
+    function updateThemeButton() {
+      themeToggle.textContent = theme === "dark" ? "☀" : "☾";
+    }
+
+    function updateLangButton() {
+      langToggle.textContent = lang.toUpperCase();
+    }
+
+    updateThemeButton();
+    updateLangButton();
+
+    themeToggle.addEventListener("click", () => {
+      theme = theme === "dark" ? "light" : "dark";
       body.setAttribute("data-theme", theme);
       localStorage.setItem("theme", theme);
-      toggle.textContent = theme === "dark" ? "☀" : "☾";
+      updateThemeButton();
     });
 
+    const translations = {
+      en: {
+        "nav-home": "Home",
+        "nav-projects": "Projects",
+        "nav-contact": "Contact",
+        "proj-title": "Data Science & Analytics Projects",
+        "proj-intro": "A selection of projects from my MSc Data Science, Industrial Engineering background, and personal learning. Each project focuses on real datasets, clear analysis, and communicating results in a practical way.",
+        "cta-title": "Want to know more?",
+        "cta-text-1": "Many of these projects are available as reproducible code and notebooks. I’m always happy to talk about the data, methods, and decisions behind the results.",
+        "cta-text-2": "You can explore more work on my GitHub or reach out via email or LinkedIn.",
+        "cta-btn-github": "Visit my GitHub",
+        "cta-btn-contact": "Contact me",
+        "cta-btn-cv": "Download CV"
+      },
+      az: {
+        "nav-home": "Ana səhifə",
+        "nav-projects": "Layihələr",
+        "nav-contact": "Əlaqə",
+        "proj-title": "Data Science və Analitika layihələri",
+        "proj-intro": "Burada Data Science magistr proqramı, Sənaye Mühəndisliyi keçmişim və şəxsi öyrənmə prosesimdən seçilmiş layihələr toplanıb. Hər layihə real datalar, aydın analiz və nəticələrin sadə dildə izahına fokuslanır.",
+        "cta-title": "Daha ətraflı öyrənmək istəyirsiniz?",
+        "cta-text-1": "Layihələrin çoxu təkrarlana bilən kod və notebook şəklində mövcuddur. İstəsəniz istifadə etdiyim data, metod və qərarlar haqqında daha ətraflı danışa bilərəm.",
+        "cta-text-2": "Daha çox işi GitHub səhifəmdə görə və ya e-poçt və LinkedIn vasitəsilə mənimlə əlaqə saxlaya bilərsiniz.",
+        "cta-btn-github": "GitHub səhifəmə keç",
+        "cta-btn-contact": "Mənimlə əlaqə",
+        "cta-btn-cv": "CV-ni yüklə"
+      }
+    };
+
+    function applyLanguage(langCode) {
+      const dict = translations[langCode] || translations.en;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+      document.documentElement.lang = langCode === "az" ? "az" : "en";
+      updateLangButton();
+    }
+
+    applyLanguage(lang);
+
+    langToggle.addEventListener("click", () => {
+      lang = lang === "en" ? "az" : "en";
+      localStorage.setItem("lang", lang);
+      applyLanguage(lang);
+    });
+
+    // SCROLL REVEAL
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) entry.target.classList.add("in-view");
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
         });
       },
       { threshold: 0.1 }
     );
+
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
 </body>
