@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Khalil Alakbarzade</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1 class="site-title">Projects</h1>
+        <p class="site-subtitle">Selected work in data science & analytics</p>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Data Science & Analytics Projects</h2>
+        <p class="page-intro">
+          Here is a selection of my projects from university coursework,
+          independent learning, and personal exploration.
+        </p>
+
+        <div class="project-list">
+          <article class="card project-card">
+            <h3>British Social Attitudes Survey 2019 – End-to-End Analysis</h3>
+            <p>
+              An end-to-end analysis of the 2019 British Social Attitudes Survey,
+              focusing on attitudes to poverty, welfare, and politics.
+              Includes data cleaning, exploratory analysis, visualisation, and
+              basic modelling in R.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: R, tidyverse, ggplot2</li>
+              <li>📊 Techniques: EDA, visualisation, factor handling</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak" target="_blank">
+              View repository on GitHub →
+            </a>
+          </article>
+
+          <article class="card project-card">
+            <h3>Social Engagement & Health in Older Adults</h3>
+            <p>
+              SPSS-based analysis investigating how age, health, anxiety/depression,
+              and life satisfaction are associated with social engagement scores.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: SPSS</li>
+              <li>📊 Techniques: Multiple linear regression, diagnostics</li>
+            </ul>
+          </article>
+
+          <article class="card project-card">
+            <h3>Data Cleaning & Validation – NLSAA Dataset</h3>
+            <p>
+              Focused on detecting missing data, outliers, and coding issues
+              in social survey data, and preparing a clean, analysis-ready dataset.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: SPSS / R</li>
+              <li>📊 Techniques: Missing data handling, outlier detection</li>
+            </ul>
+          </article>
+
+          <article class="card project-card">
+            <h3>Exploratory Analysis with R – Himalayan Expeditions</h3>
+            <p>
+              Using an open dataset on Himalayan mountaineering expeditions to
+              explore success rates, mortality, and risk factors.
+            </p>
+            <ul class="project-meta">
+              <li>🧰 Tools: R, tidyverse</li>
+              <li>📊 Techniques: EDA, visualisation, data wrangling</li>
+            </ul>
+          </article>
+
+          <!-- You can duplicate this block for future projects -->
+          <!--
+          <article class="card project-card">
+            <h3>Project Title</h3>
+            <p>Short description...</p>
+            <ul class="project-meta">
+              <li>🧰 Tools: ...</li>
+              <li>📊 Techniques: ...</li>
+            </ul>
+            <a class="link" href="GITHUB_LINK" target="_blank">
+              View repository on GitHub →
+            </a>
+          </article>
+          -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Khalil Alakbarzade. All rights reserved.</p>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
