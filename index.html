@@ -35,7 +35,7 @@
         <a href="/" data-i18n="nav-home">Home</a>
         <a href="/projects/" data-i18n="nav-projects">Projects</a>
         <a href="/#contact" data-i18n="nav-contact">Contact</a>
-        <button id="lang-toggle" class="lang-toggle" type="button">EN</button>
+        <button id="lang-toggle" class="lang-toggle" type="button">🇬🇧 EN</button>
         <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
       </nav>
     </div>
@@ -80,12 +80,12 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- SKILLS (only skills) -->
     <section class="section reveal">
       <div class="container">
         <h2 data-i18n="skills-title">Skills</h2>
 
-        <div class="grid-3">
+        <div class="grid-2">
           <div class="card reveal">
             <h3 data-i18n="skills-data">Data &amp; Analytics</h3>
             <ul>
@@ -103,44 +103,70 @@
               <li data-i18n="skills-tools-3">SQL · SPSS · Git/GitHub</li>
             </ul>
           </div>
-
-          <div class="card reveal">
-            <h3 data-i18n="skills-domains">Domains &amp; Interests</h3>
-            <ul>
-              <li data-i18n="skills-domains-1">Industrial &amp; manufacturing analytics</li>
-              <li data-i18n="skills-domains-2">Supply chain optimisation</li>
-              <li data-i18n="skills-domains-3">Social survey data &amp; public attitudes</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS -->
+    <!-- DOMAINS & INTERESTS (separate section) -->
     <section class="section section-alt reveal">
+      <div class="container">
+        <h2 data-i18n="skills-domains">Domains &amp; Interests</h2>
+        <div class="card reveal">
+          <ul>
+            <li data-i18n="skills-domains-1">Industrial &amp; manufacturing analytics</li>
+            <li data-i18n="skills-domains-2">Supply chain optimisation</li>
+            <li data-i18n="skills-domains-3">Social survey data &amp; public attitudes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS (updated list) -->
+    <section class="section reveal">
       <div class="container">
         <h2 data-i18n="featured-title">Featured Projects</h2>
 
-        <div class="grid-2">
+        <div class="grid-3">
+          <!-- Project 1: BSA 2019 R analysis -->
           <div class="card reveal">
-            <h3>British Social Attitudes 2019 – End-to-End Analysis</h3>
+            <h3>British Social Attitudes 2019 – R Analysis</h3>
             <p>
-              Analysed the 2019 British Social Attitudes Survey to explore attitudes to poverty,
-              welfare, and politics. Cleaned and transformed raw survey data, handled missing values,
-              built exploratory visualisations, and produced a short report.
+              End-to-end analysis of the British Social Attitudes Survey 2019 in R: data cleaning,
+              transformation, exploratory visualisation, and modelling around attitudes to poverty,
+              welfare, and politics.
             </p>
             <p class="tagline">R · tidyverse · Survey data</p>
-            <a class="link" href="/projects/">See more details →</a>
+            <a class="link" href="https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019" target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
           </div>
 
+          <!-- Project 2: University R work -->
           <div class="card reveal">
-            <h3>Social Engagement &amp; Health in Older Adults</h3>
+            <h3>University R Portfolio (TUoS_R)</h3>
             <p>
-              Regression-based analysis in SPSS exploring how age, physical health, mental health,
-              and life satisfaction relate to social engagement scores in older adults.
+              Collection of university R work, including data wrangling, exploratory analysis,
+              modelling exercises, and visualisation tasks completed as part of MSc Data Science
+              modules.
             </p>
-            <p class="tagline">SPSS · Regression · Data cleaning</p>
-            <a class="link" href="/projects/">See more details →</a>
+            <p class="tagline">R · tidyverse · Coursework</p>
+            <a class="link" href="https://github.com/KhalilAlak/TUoS_R" target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
+          </div>
+
+          <!-- Project 3: Dashboards -->
+          <div class="card reveal">
+            <h3>Business Dashboards in Excel &amp; Power BI</h3>
+            <p>
+              Interactive dashboards built in Excel and Power BI to track KPIs, trends, and
+              performance metrics. Focused on clear layout, drill-down views, and stakeholder-friendly
+              visual design.
+            </p>
+            <p class="tagline">Excel · Power BI · Dashboards</p>
+            <a class="link" href="https://github.com/KhalilAlak/Dashboards" target="_blank" rel="noopener">
+              View on GitHub →
+            </a>
           </div>
         </div>
       </div>
@@ -191,7 +217,7 @@
     </div>
   </footer>
 
-  <!-- JS: dark mode + language + scroll reveal -->
+  <!-- JS -->
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -200,7 +226,6 @@
     const themeToggle = document.getElementById("theme-toggle");
     const langToggle = document.getElementById("lang-toggle");
 
-    // stored settings
     const storedTheme = localStorage.getItem("theme");
     const storedLang = localStorage.getItem("lang");
     const prefersDark = window.matchMedia &&
@@ -216,7 +241,7 @@
     }
 
     function updateLangButton() {
-      langToggle.textContent = lang.toUpperCase();
+      langToggle.textContent = lang === "az" ? "🇦🇿 AZ" : "🇬🇧 EN";
     }
 
     updateThemeButton();
@@ -229,7 +254,6 @@
       updateThemeButton();
     });
 
-    // Translations
     const translations = {
       en: {
         "nav-home": "Home",
@@ -315,7 +339,6 @@
       updateLangButton();
     }
 
-    // initial language
     applyLanguage(lang);
 
     langToggle.addEventListener("click", () => {
