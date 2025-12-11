@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Khalil Alakbarzade</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/style.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="canonical" href="https://khalilalakbarzade.com/projects/" />
+</head>
+
+<body data-theme="light">
+  <header class="site-header">
+    <div class="container header-content">
+      <div>
+        <h1 class="site-title">Projects</h1>
+        <p class="site-subtitle">
+          Selected work in data science, analytics, and machine learning
+        </p>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/#contact">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal">
+      <div class="container">
+        <h2>Data Science & Analytics Projects</h2>
+        <p class="page-intro">
+          A selection of projects from my MSc Data Science, Industrial Engineering background,
+          and personal learning. Each project focuses on real datasets, clear analysis, and
+          communicating results in a practical way.
+        </p>
+
+        <div class="project-list">
+          <!-- Example projects (same content as before) -->
+          <!-- ... keep your existing project cards here ... -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt reveal">
+      <div class="container">
+        <h2>Want to know more?</h2>
+        <p>
+          Many of these projects are available as reproducible code and notebooks.
+          I’m always happy to talk about the data, methods, and decisions behind the results.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank" rel="noopener">Visit my GitHub</a>
+          <a class="btn outline" href="/#contact">Contact me</a>
+          <a class="btn outline" href="/Khalil_Alakbarzade_CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Khalil Alakbarzade. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const body = document.body;
+    const toggle = document.getElementById("theme-toggle");
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    let theme = storedTheme || (prefersDark ? "dark" : "light");
+    body.setAttribute("data-theme", theme);
+    toggle.textContent = theme === "dark" ? "☀" : "☾";
+
+    toggle.addEventListener("click", () => {
+      theme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      body.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      toggle.textContent = theme === "dark" ? "☀" : "☾";
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("in-view");
+        });
+      },
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
