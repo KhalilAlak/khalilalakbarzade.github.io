@@ -210,6 +210,58 @@ body {
   box-shadow: var(--shadow-strong);
 }
 
+/* Phase 1: Hero eyebrow + headline + badges */
+.hero-eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+
+.hero-headline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
+  color: var(--text);
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  color: var(--text);
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--muted);
+}
+
+body[data-theme="dark"] .badge {
+  background: rgba(96, 165, 250, 0.14);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+body[data-theme="dark"] .badge-outline {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+}
+
+
 /* -----------------------------------------
    BUTTONS
 ----------------------------------------- */
