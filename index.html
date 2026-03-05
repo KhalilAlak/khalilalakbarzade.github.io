@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Khalil Alakbarzade | Data Scientist</title>
-  <meta name="description" content="Khalil Alakbarzade (Xəlil Ələkbərzadə) – Data Science MSc student with an Industrial Engineering background. Portfolio of projects in R, SPSS, SQL, Excel and Power BI across supply chain, manufacturing and telecom analytics." />
-  <meta name="keywords" content="Khalil Alakbarzade, Xəlil Ələkbərzadə, Xelil Elekberzade, Khalil Alak, KhalilAlak, KhalilAlakbar, Khalil Alakbarzada, Khalil Alakbarzadeh, Data Scientist, Data Science MSc, University of Sheffield, Azərbaycan data scientist, supply chain analytics" />
+  <meta name="description"
+    content="Khalil Alakbarzade (Xəlil Ələkbərzadə) – Data Science MSc student with an Industrial Engineering background. Portfolio of projects in R, SPSS, SQL, Excel and Power BI across supply chain, manufacturing and telecom analytics." />
+  <meta name="keywords"
+    content="Khalil Alakbarzade, Xəlil Ələkbərzadə, Xelil Elekberzade, Khalil Alak, KhalilAlak, KhalilAlakbar, Khalil Alakbarzada, Khalil Alakbarzadeh, Data Scientist, Data Science MSc, University of Sheffield, Azərbaycan data scientist, supply chain analytics" />
 
   <script type="application/ld+json">
 {
@@ -28,7 +31,7 @@
 }
 </script>
 
-  
+
   <!-- Google Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +50,7 @@
 <body data-theme="light">
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-content">
+    <div class="header-container">
       <div>
         <h1 class="site-title">Khalil Alakbarzade</h1>
         <p class="site-subtitle">
@@ -59,8 +62,16 @@
         <a href="/" data-i18n="nav-home">Home</a>
         <a href="/projects/" data-i18n="nav-projects">Projects</a>
         <a href="/#contact" data-i18n="nav-contact">Contact</a>
-        <button id="lang-toggle" class="lang-toggle" type="button">🇬🇧 EN</button>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+        <button id="lang-toggle" class="lang-toggle" type="button"><svg viewBox="0 0 24 24" class="icon-sm"
+            style="margin-right:4px">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg><span id="lang-text">EN</span></button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg
+            viewBox="0 0 24 24" class="icon" id="theme-icon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg></button>
       </nav>
     </div>
   </header>
@@ -95,10 +106,23 @@
           <img src="/assets/profile.jpg" alt="Khalil Alakbarzade" class="avatar" />
           <h3 data-i18n="quick-title">Quick Info</h3>
           <ul>
-            <li data-i18n="quick-based">📍 Based in the UK</li>
-            <li data-i18n="quick-msc">🎓 MSc Data Science</li>
-            <li data-i18n="quick-bsc">🎓 BSc Industrial Engineering</li>
-            <li data-i18n="quick-stack">💻 Python · R · SQL · SPSS</li>
+            <li><svg viewBox="0 0 24 24" class="icon">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg> <span data-i18n="quick-based">Based in the UK</span></li>
+            <li><svg viewBox="0 0 24 24" class="icon">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg> <span data-i18n="quick-msc">MSc Data Science</span></li>
+            <li><svg viewBox="0 0 24 24" class="icon">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg> <span data-i18n="quick-bsc">BSc Industrial Engineering</span></li>
+            <li><svg viewBox="0 0 24 24" class="icon">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg> <span data-i18n="quick-stack">Python · R · SQL · SPSS</span></li>
           </ul>
         </div>
       </div>
@@ -151,45 +175,46 @@
         <h2 data-i18n="featured-title">Featured Projects</h2>
 
         <div class="grid-3">
-          <!-- Project 1: BSA 2019 R analysis -->
+          <!-- Project 1: IJC437-Air-Quality -->
           <div class="card reveal">
-            <h3>British Social Attitudes 2019 – R Analysis</h3>
-            <p>
-              End-to-end analysis of the British Social Attitudes Survey 2019 in R: data cleaning,
-              transformation, exploratory visualisation, and modelling around attitudes to poverty,
-              welfare, and politics.
+            <h3 data-i18n="feat-air-forecast-title">UK Air Quality Forecasting</h3>
+            <p data-i18n="feat-air-forecast-desc">
+              End-to-end data science analysis of UK PM2.5 air quality using OpenAQ data.
+              Includes data collection, EDA, feature engineering, and time-series forecasting using
+              meteorological data.
+            </p>
+            <p class="tagline">Python · Machine Learning · OpenAQ</p>
+            <a class="link" href="https://github.com/KhalilAlak/IJC437-Air-Quality" target="_blank" rel="noopener">
+              <span data-i18n="feat-view-github">View on GitHub →</span>
+            </a>
+          </div>
+
+          <!-- Project 2: IJC445-Air-Quality-Visualisation -->
+          <div class="card reveal">
+            <h3 data-i18n="feat-air-viz-title">Air Quality Visualisation</h3>
+            <p data-i18n="feat-air-viz-desc">
+              Comprehensive visual analysis of air pollution across major UK cities. Adheres to
+              the ASSERT framework and the Grammar of Graphics to build robust data stories.
+            </p>
+            <p class="tagline">R · ggplot2 · Data Storytelling</p>
+            <a class="link" href="https://github.com/KhalilAlak/IJC445-Air-Quality-Visualisation" target="_blank"
+              rel="noopener">
+              <span data-i18n="feat-view-github">View on GitHub →</span>
+            </a>
+          </div>
+
+          <!-- Project 3: BSA 2019 R analysis -->
+          <div class="card reveal">
+            <h3 data-i18n="feat-bsa-title">British Social Attitudes 2019</h3>
+            <p data-i18n="feat-bsa-desc">
+              End-to-end analysis of the British Social Attitudes Survey in R: data cleaning,
+              transformation, exploratory visualisation, and modelling around attitudes to poverty
+              and politics.
             </p>
             <p class="tagline">R · tidyverse · Survey data</p>
-            <a class="link" href="https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </div>
-
-          <!-- Project 2: University R work -->
-          <div class="card reveal">
-            <h3>University R Portfolio (TUoS_R)</h3>
-            <p>
-              Collection of university R work, including data wrangling, exploratory analysis,
-              modelling exercises, and visualisation tasks completed as part of MSc Data Science
-              modules.
-            </p>
-            <p class="tagline">R · tidyverse · Coursework</p>
-            <a class="link" href="https://github.com/KhalilAlak/TUoS_R" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </div>
-
-          <!-- Project 3: Dashboards -->
-          <div class="card reveal">
-            <h3>Business Dashboards in Excel &amp; Power BI</h3>
-            <p>
-              Interactive dashboards built in Excel and Power BI to track KPIs, trends, and
-              performance metrics. Focused on clear layout, drill-down views, and stakeholder-friendly
-              visual design.
-            </p>
-            <p class="tagline">Excel · Power BI · Dashboards</p>
-            <a class="link" href="https://github.com/KhalilAlak/Dashboards" target="_blank" rel="noopener">
-              View on GitHub →
+            <a class="link" href="https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019" target="_blank"
+              rel="noopener">
+              <span data-i18n="feat-view-github">View on GitHub →</span>
             </a>
           </div>
         </div>
@@ -226,9 +251,22 @@
         </p>
 
         <ul class="contact-list">
-          <li>📧 Email: <a href="mailto:alakbarzadekhalil@gmail.com">alakbarzadekhalil@gmail.com</a></li>
-          <li>💼 LinkedIn: <a href="https://linkedin.com/in/khalilalakbarzade" target="_blank" rel="noopener">linkedin.com/in/khalilalakbarzade</a></li>
-          <li>🐙 GitHub: <a href="https://github.com/KhalilAlak" target="_blank" rel="noopener">github.com/KhalilAlak</a></li>
+          <li><svg viewBox="0 0 24 24" class="icon">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg> Email: <a href="mailto:alakbarzadekhalil@gmail.com">alakbarzadekhalil@gmail.com</a></li>
+          <li><svg viewBox="0 0 24 24" class="icon">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg> LinkedIn: <a href="https://linkedin.com/in/khalilalakbarzade" target="_blank"
+              rel="noopener">linkedin.com/in/khalilalakbarzade</a></li>
+          <li><svg viewBox="0 0 24 24" class="icon">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg> GitHub: <a href="https://github.com/KhalilAlak" target="_blank"
+              rel="noopener">github.com/KhalilAlak</a></li>
         </ul>
       </div>
     </section>
@@ -260,12 +298,23 @@
 
     body.setAttribute("data-theme", theme);
 
+    const themeIcon = document.getElementById("theme-icon");
+    const langText = document.getElementById("lang-text");
+
     function updateThemeButton() {
-      themeToggle.textContent = theme === "dark" ? "☀" : "☾";
+      if (themeIcon) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+        } else {
+          themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        }
+      }
     }
 
     function updateLangButton() {
-      langToggle.textContent = lang === "az" ? "🇦🇿 AZ" : "🇬🇧 EN";
+      if (langText) {
+        langText.textContent = lang === "az" ? "AZ" : "EN";
+      }
     }
 
     updateThemeButton();
@@ -283,17 +332,17 @@
         "nav-home": "Home",
         "nav-projects": "Projects",
         "nav-contact": "Contact",
-        "hero-title": "Hi, I’m Khalil 👋",
-        "hero-p1": "I’m a Data Science MSc student with an Industrial Engineering background, focusing on data analysis, machine learning, and data visualisation. I enjoy turning messy real-world data into clear insights and practical decisions.",
-        "hero-p2": "I’m especially interested in applying data science in <strong>manufacturing, supply chains, and telecom</strong>.",
+        "hero-title": "Khalil Alakbarzade",
+        "hero-p1": "I am an MSc Data Science student with a strong foundation in Industrial Engineering, specializing in advanced data analysis, machine learning, and data visualization. I excel at transforming complex, real-world datasets into actionable insights and strategic decisions.",
+        "hero-p2": "My primary professional interests lie in applying data science methodologies within <strong>supply chain optimization, telecommunications, and advanced analytics</strong>.",
         "btn-projects": "View My Projects",
         "btn-contact": "Get in Touch",
         "btn-cv": "Download CV",
         "quick-title": "Quick Info",
-        "quick-based": "📍 Based in the UK",
-        "quick-msc": "🎓 MSc Data Science",
-        "quick-bsc": "🎓 BSc Industrial Engineering",
-        "quick-stack": "💻 Python · R · SQL · SPSS",
+        "quick-based": "Based in the UK",
+        "quick-msc": "MSc Data Science",
+        "quick-bsc": "BSc Industrial Engineering",
+        "quick-stack": "Python · R · SQL · SPSS",
         "skills-title": "Skills",
         "skills-data": "Data & Analytics",
         "skills-tools": "Tools & Languages",
@@ -304,31 +353,38 @@
         "skills-tools-1": "Python (pandas, NumPy, scikit-learn)",
         "skills-tools-2": "R (tidyverse)",
         "skills-tools-3": "SQL · SPSS · Git/GitHub",
-        "skills-domains-1": "Industrial & manufacturing analytics",
+        "skills-domains-1": "Advanced business analytics & strategy",
         "skills-domains-2": "Supply chain optimisation",
         "skills-domains-3": "Social survey data & public attitudes",
         "featured-title": "Featured Projects",
         "about-title": "About Me",
-        "about-p1": "I have a strong quantitative background from Industrial Engineering and I’m currently strengthening my skills in machine learning, programming, and data visualisation through a Data Science MSc.",
-        "about-p2": "I enjoy working with real datasets, especially where there are missing values, messy structures, and complex questions. My goal is to build reliable, ethical, and explainable data solutions that connect technical modelling with real business or policy problems.",
+        "about-p1": "Leveraging a robust quantitative foundation in Industrial Engineering, I am currently advancing my expertise in machine learning, statistical modelling, and computational programming through an MSc in Data Science.",
+        "about-p2": "I thrive on tackling complex business challenges using real-world data, particularly addressing missing values and unstructured formats. My ultimate objective is to develop reliable, ethical, and interpretable data solutions that bridge the gap between technical complexity and tangible business value.",
         "contact-title": "Contact",
-        "contact-text": "If you’d like to talk about data science roles, research opportunities, or collaborations, feel free to reach out."
+        "contact-text": "If you’d like to talk about data science roles, research opportunities, or collaborations, feel free to reach out.",
+        "feat-air-forecast-title": "UK Air Quality Forecasting",
+        "feat-air-forecast-desc": "End-to-end data science analysis of UK PM2.5 air quality using OpenAQ data. Includes data collection, EDA, feature engineering, and time-series forecasting using meteorological data.",
+        "feat-air-viz-title": "Air Quality Visualisation",
+        "feat-air-viz-desc": "Comprehensive visual analysis of air pollution across major UK cities. Adheres to the ASSERT framework and the Grammar of Graphics to build robust data stories.",
+        "feat-bsa-title": "British Social Attitudes 2019",
+        "feat-bsa-desc": "End-to-end analysis of the British Social Attitudes Survey in R: data cleaning, transformation, exploratory visualisation, and modelling around attitudes to poverty and politics.",
+        "feat-view-github": "View on GitHub →"
       },
       az: {
         "nav-home": "Ana səhifə",
         "nav-projects": "Layihələr",
         "nav-contact": "Əlaqə",
-        "hero-title": "Salam, mən Xəliləm 👋",
-        "hero-p1": "Mən Sənaye Mühəndisliyi təhsilli Data Science magistr tələbəsiyəm. Məlumat analizi, maşın öyrənməsi və data vizuallaşdırması ilə məşğulam və real həyatdan gələn qarışıq datanı aydın və praktik nəticələrə çevirməyi sevirəm.",
-        "hero-p2": "<strong>İstehsalat, təchizat zənciri və telekom</strong> sahələrində data elminin tətbiqinə xüsusi maraq göstərirəm.",
+        "hero-title": "Xəlil Ələkbərzadə",
+        "hero-p1": "Mən Sənaye Mühəndisliyi bazasına malik Data Science magistr tələbəsiyəm; əsas diqqətimi qabaqcıl data analizinə, maşın öyrənməsinə və dataların vizuallaşdırılmasına yönəltmişəm. Mürəkkəb və real dataları aydın strategiyalara və qərar qəbuletmə mexanizmlərinə çevirməkdə ixtisaslaşıram.",
+        "hero-p2": "Əsas peşəkar maraq dairəm data elminin <strong>təchizat zəncirinin optimallaşdırılması, telekommunikasiya və qabaqcıl analitika</strong> sahələrində tətbiqini əhatə edir.",
         "btn-projects": "Layihələrimə bax",
         "btn-contact": "Mənimlə əlaqə",
         "btn-cv": "CV-ni yüklə",
         "quick-title": "Qısa məlumat",
-        "quick-based": "📍 Böyük Britaniyada yaşayıram",
-        "quick-msc": "🎓 Data Science magistri",
-        "quick-bsc": "🎓 Sənaye Mühəndisliyi bakalavrı",
-        "quick-stack": "💻 Python · R · SQL · SPSS",
+        "quick-based": "Böyük Britaniyada yaşayıram",
+        "quick-msc": "Data Science magistri",
+        "quick-bsc": "Sənaye Mühəndisliyi bakalavrı",
+        "quick-stack": "Python · R · SQL · SPSS",
         "skills-title": "Bacarıqlar",
         "skills-data": "Data və Analitika",
         "skills-tools": "Alətlər və Dillər",
@@ -339,15 +395,22 @@
         "skills-tools-1": "Python (pandas, NumPy, scikit-learn)",
         "skills-tools-2": "R (tidyverse)",
         "skills-tools-3": "SQL · SPSS · Git/GitHub",
-        "skills-domains-1": "Sənaye və istehsalat analitikası",
+        "skills-domains-1": "Qabaqcıl biznes analitikası və strategiya",
         "skills-domains-2": "Təchizat zəncirinin optimallaşdırılması",
         "skills-domains-3": "Sosial sorğu dataları və ictimai rəylər",
         "featured-title": "Seçilmiş layihələr",
         "about-title": "Haqqımda",
-        "about-p1": "Mən güclü riyazi və analitik baza verən Sənaye Mühəndisliyi təhsili almışam və hazırda Data Science magistr proqramı vasitəsilə maşın öyrənməsi, proqramlaşdırma və vizuallaşdırma bacarıqlarımı inkişaf etdirirəm.",
-        "about-p2": "Xüsusilə itkin dəyərləri, qarışıq strukturu və çətin sualları olan real datalarla işləməyi sevirəm. Məqsədim texniki modelləşdirməni real biznes və ya siyasət problemləri ilə birləşdirən etibarlı, etik və izah edilə bilən data həlləri qurmaqdır.",
+        "about-p1": "Sənaye Mühəndisliyi sahəsinin verdiyi güclü kəmiyyət və analitik baza əsasında, hazırda Data Science magistr proqramı çərçivəsində maşın öyrənməsi, statistik modelləşdirmə və proqramlaşdırma üzrə peşəkarlığımı artırıram.",
+        "about-p2": "Mürəkkəb struktura malik və qeyri-tam məlumatlarla zəngin olan real datalar üzərində çalışaraq çətin biznes problemlərini həll etməyə üstünlük verirəm. Əsas məqsədim texniki mürəkkəbliyi real biznes dəyəri ilə birləşdirən etibarlı, etik və aydın izah edilə bilən data həlləri dizayn etməkdir.",
         "contact-title": "Əlaqə",
-        "contact-text": "Data science vəzifələri, tədqiqat imkanları və ya əməkdaşlıq barədə danışmaq istəyirsinizsə, mənimlə rahatlıqla əlaqə saxlaya bilərsiniz."
+        "contact-text": "Data science rolları, tədqiqat imkanları və ya əməkdaşlıq barədə danışmaq istəsəniz, mənimlə əlaqə saxlamaqdan çəkinməyin.",
+        "feat-air-forecast-title": "Böyük Britaniya Hava Keyfiyyətinin Proqnozlaşdırılması",
+        "feat-air-forecast-desc": "OpenAQ məlumatlarından istifadə edərək Böyük Britaniyada PM2.5 hava keyfiyyətinin uçdan-uca data elmi təhlili. Məlumatların toplanması, EDA, xüsusiyyət mühəndisliyi və meteoroloji məlumatlardan istifadə edərək zaman seriyalarının proqnozlaşdırılmasını əhatə edir.",
+        "feat-air-viz-title": "Hava Keyfiyyətinin Vizuallaşdırılması",
+        "feat-air-viz-desc": "Böyük Britaniyanın əsas şəhərlərində hava çirklənməsinin hərtərəfli vizual təhlili. Etibarlı məlumat hekayələri qurmaq üçün ASSERT çərçivəsinə və Qrafik Qrammatikasına riayət olunur.",
+        "feat-bsa-title": "Böyük Britaniya Sosial Baxışlar 2019",
+        "feat-bsa-desc": "R-də Britaniya Sosial Baxışlar Sorğusunun uçdan-uca təhlili: yoxsulluq və siyasətə münasibət üzrə məlumatların təmizlənməsi, transformasiyası, kəşfiyyat vizuallaşdırılması və modelləşdirilməsi.",
+        "feat-view-github": "GitHub-da bax →"
       }
     };
 
@@ -385,8 +448,9 @@
 
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
-<p style="display:none;">
-  Xəlil Ələkbərzadə · Xalil Elekberzade · Xelil Alakberzade · Khalil Alakbarzade – Data Scientist
-</p>
+  <p style="display:none;">
+    Xəlil Ələkbərzadə · Xalil Elekberzade · Xelil Alakberzade · Khalil Alakbarzade – Data Scientist
+  </p>
 </body>
+
 </html>

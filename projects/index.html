@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +24,7 @@
 <body data-theme="light">
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-content">
+    <div class="header-container">
       <div>
         <h1 class="site-title">Khalil Alakbarzade</h1>
         <p class="site-subtitle">
@@ -34,8 +35,16 @@
         <a href="/" data-i18n="nav-home">Home</a>
         <a href="/projects/" data-i18n="nav-projects">Projects</a>
         <a href="/#contact" data-i18n="nav-contact">Contact</a>
-        <button id="lang-toggle" class="lang-toggle" type="button">🇬🇧 EN</button>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+        <button id="lang-toggle" class="lang-toggle" type="button"><svg viewBox="0 0 24 24" class="icon-sm"
+            style="margin-right:4px">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg><span id="lang-text">EN</span></button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode"><svg
+            viewBox="0 0 24 24" class="icon" id="theme-icon">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg></button>
       </nav>
     </div>
   </header>
@@ -52,87 +61,226 @@
         </p>
 
         <div class="project-list">
-          <!-- Project 1: BSA 2019 R -->
+          <!-- Project 1: IJC437-Air-Quality -->
           <article class="card project-card reveal">
-            <h3>British Social Attitudes 2019 – R Analysis</h3>
-            <p>
+            <h3 data-i18n="proj-air-forecast-title">UK Air Quality Forecasting</h3>
+            <p data-i18n="proj-air-forecast-desc">
+              End-to-end data science analysis of UK PM2.5 air quality using OpenAQ data.
+              Includes data collection, EDA, feature engineering, and time-series forecasting using
+              meteorological data.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Python (pandas, scikit-learn), OpenAQ</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: API Data, Time-series Forecasting, Machine Learning</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/IJC437-Air-Quality" target="_blank" rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Project 2: IJC445-Air-Quality-Visualisation -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-air-viz-title">Air Quality Visualisation</h3>
+            <p data-i18n="proj-air-viz-desc">
+              Comprehensive visual analysis of air pollution across major UK cities. Adheres to
+              the ASSERT framework and the Grammar of Graphics to build robust data stories.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: R (ggplot2, sf, leaflet)</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Data Storytelling, ASSERT Framework, Spatial Mapping</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/IJC445-Air-Quality-Visualisation" target="_blank"
+              rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Project 3: Tableau -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-tableau-title">Tableau Dashboards Portfolio</h3>
+            <p data-i18n="proj-tableau-desc">
+              A collection of interactive Tableau dashboards built to explore retail, finance, and socio-economic
+              datasets.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Tableau</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Interactive Visualisation, Data Storytelling</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/Tableau" target="_blank" rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Project 4: TUoS_Python -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-python-title">University Python Portfolio (TUoS_Python)</h3>
+            <p data-i18n="proj-python-desc">
+              Collection of Python programming work from MSc Data Science modules, showcasing data structures,
+              algorithms, object-oriented programming, and API interactions.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Python (pandas, numpy, requests)</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: OOP, API integration, Data structures</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/TUoS_Python" target="_blank" rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Project 5: IBM Extract Data -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-ibm-extract-title">IBM DS: Extracting & Visualizing Stock Data</h3>
+            <p data-i18n="proj-ibm-extract-desc">
+              An IBM Data Science certification project focused on web scraping financial data, utilising yfinance, and
+              plotting historical stock performance.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Python (BeautifulSoup, yfinance, plotly)</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Web Scraping, Financial Analytics</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/IBM_DS_Extracting-and-Visualizing-Stock-Data"
+              target="_blank" rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Project 6: IBM Final -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-ibm-final-title">IBM DS: Applied Data Science Capstone</h3>
+            <p data-i18n="proj-ibm-final-desc">
+              The final capstone for the IBM Data Science Professional Certificate. Involves exploratory data analysis,
+              interactive map creation, and predictive classification models to determine SpaceX Falcon 9 first stage
+              landing success.
+            </p>
+            <ul class="project-meta">
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Python (scikit-learn, folium, Dash)</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Predictive Modelling, Classification, Spatial Dashboards</li>
+            </ul>
+            <a class="link" href="https://github.com/KhalilAlak/IBM_DS_Final-Assignment" target="_blank" rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
+            </a>
+          </article>
+
+          <!-- Legacy Project: BSA 2019 R -->
+          <article class="card project-card reveal">
+            <h3 data-i18n="proj-bsa-title">British Social Attitudes 2019 – R Analysis</h3>
+            <p data-i18n="proj-bsa-desc">
               End-to-end analysis of the 2019 British Social Attitudes Survey using R. Includes
               data cleaning, factor handling, exploratory visualisation, and modelling around
               attitudes to poverty, welfare, and politics.
             </p>
             <ul class="project-meta">
-              <li>🧰 Tools: R (tidyverse, ggplot2)</li>
-              <li>📊 Techniques: Data cleaning, EDA, visualisation, survey data</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: R (tidyverse, ggplot2)</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Data cleaning, EDA, visualisation, survey data</li>
             </ul>
-            <a class="link" href="https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </article>
-
-          <!-- Project 2: TUoS_R -->
-          <article class="card project-card reveal">
-            <h3>University R Portfolio (TUoS_R)</h3>
-            <p>
-              Collection of R work completed at the University of Sheffield. Covers data wrangling,
-              exploratory analysis, modelling exercises, and visualisation tasks from Data Science
-              modules.
-            </p>
-            <ul class="project-meta">
-              <li>🧰 Tools: R (tidyverse)</li>
-              <li>📊 Techniques: Data wrangling, EDA, basic modelling</li>
-            </ul>
-            <a class="link" href="https://github.com/KhalilAlak/TUoS_R" target="_blank" rel="noopener">
-              View on GitHub →
-            </a>
-          </article>
-
-          <!-- Project 3: TUoS_SPSS -->
-          <article class="card project-card reveal">
-            <h3>SPSS Analyses – University Coursework (TUoS_SPSS)</h3>
-            <p>
-              SPSS projects from my MSc Data Science, including regression models, group comparisons,
-              diagnostics, and write-ups. Focused on interpreting output for real-world social and
-              health research questions.
-            </p>
-            <ul class="project-meta">
-              <li>🧰 Tools: SPSS</li>
-              <li>📊 Techniques: Regression, group tests, assumption checks</li>
-            </ul>
-            <a class="link" href="https://github.com/KhalilAlak/TUoS_SPSS" target="_blank" rel="noopener">
-              View on GitHub →
+            <a class="link" href="https://github.com/KhalilAlak/British-Social-Attitudes-Analysis-2019" target="_blank"
+              rel="noopener">
+              <span data-i18n="proj-view-github">View on GitHub →</span>
             </a>
           </article>
 
           <!-- Project 4: SQL -->
           <article class="card project-card reveal">
-            <h3>SQL Practice – Data Querying &amp; Analysis (DSA_SQL)</h3>
-            <p>
+            <h3 data-i18n="proj-sql-title">SQL Practice – Data Querying & Analysis (DSA_SQL)</h3>
+            <p data-i18n="proj-sql-desc">
               A set of SQL exercises focusing on querying, joins, aggregation, window functions,
               and basic analytics patterns for working with relational data.
             </p>
             <ul class="project-meta">
-              <li>🧰 Tools: SQL</li>
-              <li>📊 Techniques: Joins, aggregation, filtering, window functions</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: SQL</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: Joins, aggregation, filtering, window functions</li>
             </ul>
             <a class="link" href="https://github.com/KhalilAlak/DSA_SQL" target="_blank" rel="noopener">
-              View on GitHub →
+              <span data-i18n="proj-view-github">View on GitHub →</span>
             </a>
           </article>
 
           <!-- Project 5: Dashboards -->
           <article class="card project-card reveal">
-            <h3>Dashboards in Excel &amp; Power BI</h3>
-            <p>
+            <h3 data-i18n="proj-dashboards-title">Dashboards in Excel & Power BI</h3>
+            <p data-i18n="proj-dashboards-desc">
               Interactive dashboards for tracking KPIs and trends, built using Excel and Power BI.
               Designed for clear storytelling, drill-down exploration, and stakeholder-friendly
               visual design.
             </p>
             <ul class="project-meta">
-              <li>🧰 Tools: Excel, Power BI</li>
-              <li>📊 Techniques: KPI design, dashboard layout, visual storytelling</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg> Tools: Excel, Power BI</li>
+              <li><svg viewBox="0 0 24 24" class="icon-sm" style="margin-right:4px">
+                  <path d="M18 20V10"></path>
+                  <path d="M12 20V4"></path>
+                  <path d="M6 20v-6"></path>
+                </svg> Techniques: KPI design, dashboard layout, visual storytelling</li>
             </ul>
             <a class="link" href="https://github.com/KhalilAlak/Dashboards" target="_blank" rel="noopener">
-              View on GitHub →
+              <span data-i18n="proj-view-github">View on GitHub →</span>
             </a>
           </article>
         </div>
@@ -152,7 +300,8 @@
         </p>
 
         <div class="hero-buttons">
-          <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank" rel="noopener" data-i18n="cta-btn-github">
+          <a class="btn primary" href="https://github.com/KhalilAlak" target="_blank" rel="noopener"
+            data-i18n="cta-btn-github">
             Visit my GitHub
           </a>
           <a class="btn outline" href="/#contact" data-i18n="cta-btn-contact">Contact me</a>
@@ -188,12 +337,23 @@
 
     body.setAttribute("data-theme", theme);
 
+    const themeIcon = document.getElementById("theme-icon");
+    const langText = document.getElementById("lang-text");
+
     function updateThemeButton() {
-      themeToggle.textContent = theme === "dark" ? "☀" : "☾";
+      if (themeIcon) {
+        if (theme === "dark") {
+          themeIcon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+        } else {
+          themeIcon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+        }
+      }
     }
 
     function updateLangButton() {
-      langToggle.textContent = lang === "az" ? "🇦🇿 AZ" : "🇬🇧 EN";
+      if (langText) {
+        langText.textContent = lang === "az" ? "AZ" : "EN";
+      }
     }
 
     updateThemeButton();
@@ -212,7 +372,26 @@
         "nav-projects": "Projects",
         "nav-contact": "Contact",
         "proj-title": "Data Science & Analytics Projects",
-        "proj-intro": "A selection of projects from my MSc Data Science, Industrial Engineering background, and personal learning. Each project focuses on real datasets, clear analysis, and communicating results in a practical way.",
+        "proj-intro": "A selection of projects from my MSc Data Science, engineering background, and personal learning. Each project focuses on real datasets, robust methodology, and communicating results effectively.",
+        "proj-air-forecast-title": "UK Air Quality Forecasting",
+        "proj-air-forecast-desc": "End-to-end data science analysis of UK PM2.5 air quality using OpenAQ data. Includes data collection, EDA, feature engineering, and time-series forecasting using meteorological data.",
+        "proj-air-viz-title": "Air Quality Visualisation",
+        "proj-air-viz-desc": "Comprehensive visual analysis of air pollution across major UK cities. Adheres to the ASSERT framework and the Grammar of Graphics to build robust data stories.",
+        "proj-tableau-title": "Tableau Dashboards Portfolio",
+        "proj-tableau-desc": "A collection of interactive Tableau dashboards built to explore retail, finance, and socio-economic datasets.",
+        "proj-python-title": "University Python Portfolio (TUoS_Python)",
+        "proj-python-desc": "Collection of Python programming work from MSc Data Science modules, showcasing data structures, algorithms, object-oriented programming, and API interactions.",
+        "proj-ibm-extract-title": "IBM DS: Extracting & Visualizing Stock Data",
+        "proj-ibm-extract-desc": "An IBM Data Science certification project focused on web scraping financial data, utilising yfinance, and plotting historical stock performance.",
+        "proj-ibm-final-title": "IBM DS: Applied Data Science Capstone",
+        "proj-ibm-final-desc": "The final capstone for the IBM Data Science Professional Certificate. Involves exploratory data analysis, interactive map creation, and predictive classification models to determine SpaceX Falcon 9 first stage landing success.",
+        "proj-bsa-title": "British Social Attitudes 2019 – R Analysis",
+        "proj-bsa-desc": "End-to-end analysis of the 2019 British Social Attitudes Survey using R. Includes data cleaning, factor handling, exploratory visualisation, and modelling around attitudes to poverty, welfare, and politics.",
+        "proj-sql-title": "SQL Practice – Data Querying & Analysis (DSA_SQL)",
+        "proj-sql-desc": "A set of SQL exercises focusing on querying, joins, aggregation, window functions, and basic analytics patterns for working with relational data.",
+        "proj-dashboards-title": "Dashboards in Excel & Power BI",
+        "proj-dashboards-desc": "Interactive dashboards for tracking KPIs and trends, built using Excel and Power BI. Designed for clear storytelling, drill-down exploration, and stakeholder-friendly visual design.",
+        "proj-view-github": "View on GitHub →",
         "cta-title": "Want to know more?",
         "cta-text-1": "Many of these projects are available as reproducible code and notebooks. I’m always happy to talk about the data, methods, and decisions behind the results.",
         "cta-text-2": "You can explore more work on my GitHub or reach out via email or LinkedIn.",
@@ -225,7 +404,26 @@
         "nav-projects": "Layihələr",
         "nav-contact": "Əlaqə",
         "proj-title": "Data Science və Analitika layihələri",
-        "proj-intro": "Burada Data Science magistr proqramı, Sənaye Mühəndisliyi keçmişim və şəxsi öyrənmə prosesimdən seçilmiş layihələr toplanıb. Hər layihə real datalar, aydın analiz və nəticələrin sadə dildə izahına fokuslanır.",
+        "proj-intro": "Burada Data Science magistr proqramı, mühəndislik keçmişim və şəxsi tədqiqatlarımdan seçilmiş layihələr toplanıb. Hər layihə real datalar, etibarlı metodologiya və nəticələrin aydın izahına fokuslanır.",
+        "proj-air-forecast-title": "Böyük Britaniya Hava Keyfiyyətinin Proqnozlaşdırılması",
+        "proj-air-forecast-desc": "OpenAQ məlumatlarından istifadə edərək Böyük Britaniyada PM2.5 hava keyfiyyətinin uçdan-uca data elmi təhlili. Məlumatların toplanması, EDA, xüsusiyyət mühəndisliyi və meteoroloji məlumatlardan istifadə edərək zaman seriyalarının proqnozlaşdırılmasını əhatə edir.",
+        "proj-air-viz-title": "Hava Keyfiyyətinin Vizuallaşdırılması",
+        "proj-air-viz-desc": "Böyük Britaniyanın əsas şəhərlərində hava çirklənməsinin hərtərəfli vizual təhlili. Etibarlı məlumat hekayələri qurmaq üçün ASSERT çərçivəsinə və Qrafik Qrammatikasına riayət olunur.",
+        "proj-tableau-title": "Tableau İdarəetmə Paneli Portfel",
+        "proj-tableau-desc": "Pərakəndə satış, maliyyə və sosial-iqtisadi məlumat dəstlərini araşdırmaq üçün qurulmuş interaktiv Tableau tabloları.",
+        "proj-python-title": "Universitet Python Portfeli (TUoS_Python)",
+        "proj-python-desc": "Məlumat strukturlarını, alqoritmləri, obyektyönümlü proqramlaşdırmanı və API etkileşimlərini nümayiş etdirən Data Science magistr modullarından Python proqramlaşdırma işləri.",
+        "proj-ibm-extract-title": "IBM DS: Səhm Məlumatlarının Çıxarılması və Vizuallaşdırılması",
+        "proj-ibm-extract-desc": "Maliyyə məlumatlarının vebdən kazınmasına, yfinance istifadəsinə və tarixi səhm performansının qurulmasına yönəlmiş IBM Data Science sertifikatlaşdırma layihəsi.",
+        "proj-ibm-final-title": "IBM DS: Tətbiqi Məlumat Elmi Baş Daşı (Capstone)",
+        "proj-ibm-final-desc": "IBM Data Science Professional Sertifikatı üçün son layihə. SpaceX Falcon 9 birinci mərhələsinin eniş uğurunu müəyyən etmək üçün tədqiqat məlumatlarının təhlili, interaktiv xəritə yaradılması və proqnozlaşdırıcı təsnifat modellərini əhatə edir.",
+        "proj-bsa-title": "Britaniyanın Sosial Münasibətləri 2019 - R Təhlili",
+        "proj-bsa-desc": "R istifadə edərək 2019-cu il Britaniya Sosial Münasibətlər Sorğusunun uçdan-uca təhlili. Yoxsulluq, rifah və siyasətə münasibət ətrafında məlumatların təmizlənməsi, amillərin idarə edilməsi, tədqiqat vizuallaşdırması və modelləşdirilməsini əhatə edir.",
+        "proj-sql-title": "SQL Təcrübəsi - Məlumatların Sorğulanması və Təhlili (DSA_SQL)",
+        "proj-sql-desc": "Sorğu, birləşdirmə (joins), cəmləşdirmə, pəncərə funksiyaları (window functions) və əlaqəli (relational) məlumatlarla işləmək üçün əsas analitik nümunələrə yönəlmiş SQL tapşırıqları toplusu.",
+        "proj-dashboards-title": "Excel və Power BI İdarəetmə Panelləri",
+        "proj-dashboards-desc": "Excel və Power BI istifadə edərək qurulmuş KPI-ləri və meylləri (trends) izləmək üçün interaktiv idarəetmə panelləri (dashboards). Aydın hekayə xətti, detallı araşdırma və istifadəçi dostu vizual dizayn üçün tərtib edilmişdir.",
+        "proj-view-github": "GitHub-da bax →",
         "cta-title": "Daha ətraflı öyrənmək istəyirsiniz?",
         "cta-text-1": "Layihələrin çoxu təkrarlana bilən kod və notebook şəklində mövcuddur. İstəsəniz istifadə etdiyim data, metod və qərarlar haqqında daha ətraflı danışa bilərəm.",
         "cta-text-2": "Daha çox işi GitHub səhifəmdə görə və ya e-poçt və LinkedIn vasitəsilə mənimlə əlaqə saxlaya bilərsiniz.",
@@ -270,4 +468,5 @@
     document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
   </script>
 </body>
+
 </html>
